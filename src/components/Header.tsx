@@ -16,6 +16,7 @@ import {
   Coins
 } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { AmbientSoundPlayer } from "./AmbientSoundPlayer";
 
 interface HeaderProps {
   searchQuery: string;
@@ -97,6 +98,9 @@ export function Header({
             <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? "animate-spin text-emerald-500" : ""}`} />
             <span>{isRefreshing ? "Syncing..." : `${nextSyncSeconds}s`}</span>
           </button>
+
+          {/* Ambient Luxury Audio Lounge */}
+          <AmbientSoundPlayer locale={isEn ? "en" : "ko"} />
 
           {/* Morning Market Bell AI Briefing Button */}
           <button
